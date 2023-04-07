@@ -1,7 +1,7 @@
 export default {
     colors: {
-        pimary: '#DEE9FD',
-        secondary: '#91A1BD',
+        pimary: '#0F2362',
+        secondary: '#6F7BA1',
 
         initial: '#237bcf',
         success: '#00b065',

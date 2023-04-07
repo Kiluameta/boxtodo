@@ -17,11 +17,13 @@ import {
   OpenSans_700Bold,
 } from '@expo-google-fonts/open-sans'
 
+import { ThemeProvider } from 'styled-components'
 import { NavigationContainer } from '@react-navigation/native'
 import { Host } from 'react-native-portalize'
 import { GlobalProvider } from './src/globals/context'
 
 //STYLES
+import theme from './src/globals/styles/theme'
 
 import * as ScreenOrientation from 'expo-screen-orientation'
 
@@ -73,19 +75,21 @@ export default function App() {
   }else {
     return (
       <GlobalProvider>
-        <NavigationContainer>
-          <Host>
-            <StatusBar style='dark' />
-            <View
-              style={{flex: 1}}
-              onLayout={onLayout}
-            >
-              {/* INITIAL */}
-              <DashboardRoutes/>
-              <Toast config={toastConfig} />
-            </View>
-          </Host>
-        </NavigationContainer>
+        <ThemeProvider theme={theme} >
+          <NavigationContainer>
+            <Host>
+              <StatusBar style='dark' />
+              <View
+                style={{flex: 1}}
+                onLayout={onLayout}
+              >
+                {/* INITIAL */}
+                <DashboardRoutes/>
+                <Toast config={toastConfig} />
+              </View>
+            </Host>
+          </NavigationContainer>
+        </ThemeProvider>
       </GlobalProvider>
     )
   }

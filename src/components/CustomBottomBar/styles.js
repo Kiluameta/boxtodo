@@ -11,8 +11,8 @@ export const Tab = styled.View`
     align-self: center;
     align-items: center;
     justify-content: space-around;
-    border-top-left-radius: ${RFValue(25)}px;
-    border-top-right-radius: ${RFValue(25)}px;
+    border-top-left-radius: ${RFValue(35)}px;
+    border-top-right-radius: ${RFValue(35)}px;
     bottom: 0px;
     padding-bottom: ${getBottomSpace()}px;
 `

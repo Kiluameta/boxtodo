@@ -102,7 +102,7 @@ const styles = StyleSheet.create({
         width: 80,
         height: 80,
         borderRadius: 40,
-        backgroundColor: theme.colors.pimary,
+        backgroundColor: '#DEE9FD',
         bottom: 25,
         borderWidth: 4,
         borderColor: theme.colors.shape
